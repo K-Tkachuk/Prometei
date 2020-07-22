@@ -1,0 +1,72 @@
+<div class="container" style="padding-top: 30px;">
+  <ngb-alert *ngIf="isShow" type="success" (close)="isShow = false">{{ "CONTACTS.SUCCESS" | translate }}</ngb-alert>
+  <div class="row">
+    <div class="col-sm-12 col-md-6 answer-wrap">
+      <h5 class="lead font-weight-bold">{{ "CONTACTS.ANSWER" | translate }}:</h5>
+      <p>
+        {{ "CONTACTS.ANSWER_TEXT_FIRST" | translate }}
+        <strong>+38 (050) 316-15-70.</strong>
+        {{ "CONTACTS.ANSWER_TEXT_SECOND" | translate }}
+      </p>
+
+      <div class="answer-form">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <input formControlName="name" type="text" class="form-control" id="inputName" placeholder="{{nameHolder}}">
+          </div>
+          <div class="form-group">
+            <input  formControlName="phone" type="tel" class="form-control" id="inputPhone"
+              placeholder="{{phoneHolder}}">
+          </div>
+          <div class="form-group">
+            <textarea formControlName="message" placeholder="{{messageHolder}}" class="form-control" id="inputMessage"
+              rows="5"></textarea>
+          </div>
+          <button (click)="sendEmail()" type="button" [disabled]="form.invalid"
+            class="btn btn-primary btn-block">{{ "CONTACTS.SEND" | translate }}</button>
+        </form>
+        <!-- [disabled]="form.invalid" -->
+      </div>
+    </div>
+    <div class="col-sm-12  col-md-6 answer-wrap ml-auto">
+      <h5 class="lead font-weight-bold">{{ "CONTACTS.CONTACT" | translate }}:</h5>
+      <p><strong>{{"CONTACTS.PHONE"| translate}}:</strong>+38 (050) 316-15-70</p>
+      <p><strong>E-mail:</strong>prometei.od@gmail.com</p>
+
+      <div>
+        <table class="table table-sm">
+          <tbody>
+            <tr>
+              <td>{{ "CONTACTS.DAYS.MONDAY" | translate }}</td>
+              <td>09:00—19:00</td>
+            </tr>
+            <tr>
+              <td>{{ "CONTACTS.DAYS.TUESDAY" | translate }}</td>
+              <td>09:00—19:00</td>
+            </tr>
+            <tr>
+              <td>{{ "CONTACTS.DAYS.WEDNESDAY" | translate }}</td>
+              <td>09:00—19:00</td>
+            </tr>
+            <tr>
+              <td>{{ "CONTACTS.DAYS.THURSDAY" | translate }}</td>
+              <td>09:00—19:00</td>
+            </tr>
+            <tr>
+              <td>{{ "CONTACTS.DAYS.FRIDAY" | translate }}</td>
+              <td>09:00—19:00</td>
+            </tr>
+            <tr>
+              <td>{{ "CONTACTS.DAYS.SATURDAY" | translate }}</td>
+              <td>09:00—16:00</td>
+            </tr>
+            <tr>
+              <td>{{ "CONTACTS.DAYS.SUNDAY" | translate }}</td>
+              <td>{{ "CONTACTS.DAYS.HOLIDAY" | translate }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

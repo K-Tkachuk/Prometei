@@ -1,0 +1,16 @@
+.card {
+  margin: 10px;
+  width: 18rem;
+  transition: 0.5s;
+  z-index: 1000;
+  
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+
+  }
+}
+
+.card-img-top {
+  max-height: 200px;
+}

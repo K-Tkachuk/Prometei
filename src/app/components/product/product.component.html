@@ -1,0 +1,8 @@
+<div class="card">
+  <img class="card-img-top" [src]="product.link" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">№ {{ product.id }}</h5>
+    <p class="card-text">{{ product.description.title }}</p>
+    <a [routerLink]="['/product/',product.type,product.id]" class="btn btn-primary">{{"PRODUCT.SHOW_MORE" | translate}}</a>
+  </div>
+</div>

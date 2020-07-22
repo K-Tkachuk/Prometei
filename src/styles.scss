@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@font-face {
+  font-family: 'danger';
+  src: url(./assets/fonts/danger.otf);
+}
+
+* {
+  outline: none;
+  font-family: Helvetica, Arial, sans-serif, 'Times New Roman', Times, serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+app-root {
+  width: 100%;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

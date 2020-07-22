@@ -1,0 +1,6 @@
+<div class="row justify-content-center mt-5">
+    <h2>{{ "NAV.ARTICLES" | translate }}</h2>
+  </div>
+  
+  <app-article-list *ngIf="articlesList.length != 0" [articles]="articlesList"></app-article-list>
+  

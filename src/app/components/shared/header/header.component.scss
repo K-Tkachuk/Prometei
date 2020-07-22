@@ -1,0 +1,26 @@
+.logo {
+  padding: 35px;
+  cursor: pointer;
+}
+
+.lang {
+  border-radius: 2px;
+  padding: 10px;
+
+  div {
+    // height: 40px;
+    // width: 40px;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: #b30000 !important;
+  font-weight: bold;
+  cursor: default !important;
+}
+
+// .info{
+//     font-family: 'danger';
+// }

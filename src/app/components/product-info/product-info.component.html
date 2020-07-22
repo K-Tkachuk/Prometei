@@ -1,0 +1,79 @@
+<div class="container" style="padding-top: 30px; padding-bottom: 30px;">
+  <div class="row">
+    <h4>№{{product?.id}}</h4>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-12 col-lg-8">
+      <div class="root-img">
+        <ngb-carousel [interval]="0">
+          <ng-template ngbSlide *ngFor="let link of product?.photos">
+            <div class="picsum-img-wrapper root-img">
+              <img [src]="link" alt="My image description">
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-4 description">
+      <div class="card">
+        <div class="card-body align-items-center">
+          <h5 class="card-title">{{ "PRODUCT.PRE_ORDER"| translate }}</h5>
+          <p class="card-text">{{ product?.description?.price | currency}}</p>
+          <button (click)="open(content)" class="btn btn-primary btn-block">{{ "PRODUCT.ORDER"| translate }}</button>
+        </div>
+      </div>
+
+      <h4>{{ "PRODUCT.DESCRIPTION"| translate }}</h4>
+      <table class="table table-hover">
+        <tbody>
+          <tr>
+            <td>{{ "PRODUCT.STYLE"| translate }}</td>
+            <td>Классический</td>
+          </tr>
+          <tr>
+            <td>{{ "PRODUCT.MATERIAL"| translate }}</td>
+            <td>Мрамор</td>
+          </tr>
+          <tr>
+            <td>{{ "PRODUCT.FIREPLACE_WINDOW"| translate }}</td>
+            <td>600 x 800 мм</td>
+          </tr>
+          <tr>
+            <td>{{ "PRODUCT.WIDTH"| translate }}</td>
+            <td>1200 мм</td>
+          </tr>
+          <tr>
+            <td>{{ "PRODUCT.HEIGHT"| translate }}</td>
+            <td>1500 мм</td>
+          </tr>
+          <tr>
+            <td>{{ "PRODUCT.DEPTH"| translate }}</td>
+            <td>350 мм</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="d-flex justify-content-center modal-body">
+   <form [formGroup]="form">
+    <div class="form-group">
+        <h5 class="modal-title" id="modal-basic-title">{{ "PRODUCT.CREATE_ORDER" | translate }}</h5>
+        <div class="input-group d-flex justify-content-center">
+          <input formControlName="phone" type="text" class="form-control" placeholder="{{ phoneHolder }}">
+          <button [disabled]="form.invalid" (click)="modal.close()" style="border-radius: 0 0.25rem 0.25rem 0;" type="button"
+            class="btn btn-danger">{{ "OTHER.CALL_ME" | translate }}</button>
+        </div>
+      </div>
+   </form>
+  </div>
+</ng-template>

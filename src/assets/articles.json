@@ -1,0 +1,19 @@
+[{
+  "id": "1",
+  "image": "../../assets/img/classic/2.jpg",
+  "description": "ARTICLES.1.ARTICLE",
+  "title": "ARTICLES.1.TITLE",
+  "preTitle": "ARTICLES.1.PRE_TITLE"
+}, {
+  "id": "2",
+  "image": "../../assets/img/classic/2.jpg",
+  "description": "ARTICLES.2.ARTICLE",
+  "title": "ARTICLES.2.TITLE",
+  "preTitle": "ARTICLES.2.PRE_TITLE"
+}, {
+  "id": "3",
+  "image": "../../assets/img/classic/2.jpg",
+  "description": "ARTICLES.3.ARTICLE",
+  "title": "ARTICLES.3.TITLE",
+  "preTitle": "ARTICLES.3.PRE_TITLE"
+}]

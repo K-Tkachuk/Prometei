@@ -1,0 +1,32 @@
+<ul class="nav d-flex justify-content-around">
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="'/'"
+      [routerLinkActiveOptions]="{exact: true}">{{"NAV.HOME" | translate}}</a>
+  </li>
+  <!-- <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="'\products'">{{"NAV.PRODUCTS" | translate}}</a>
+  </li> -->
+
+  <li #dropdown ngbDropdown class="nav-item dropdown" (mouseenter)="open()" (mouseleave)="close()">
+    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+      {{"NAV.PRODUCTS" | translate}}
+    </a>
+    <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" [routerLink]="'/products/classic'">{{"STYLE.CLASSIC" | translate}}</a>
+      <a class="dropdown-item" [routerLink]="'/products/modern'">{{"STYLE.MODERN" | translate}}</a>
+      <a class="dropdown-item" [routerLink]="'/products/country'">{{"STYLE.COUNTRY" | translate}}</a>
+      <a class="dropdown-item" [routerLink]="'/products/doors'">{{"STYLE.DOORS" | translate}}</a>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="'\article'">{{"NAV.ARTICLES" | translate}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="'\about'">{{"NAV.ABOUT" | translate}}</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" [routerLink]="'\contacts'">{{"NAV.CONTACTS" | translate}}</a>
+  </li>
+</ul>

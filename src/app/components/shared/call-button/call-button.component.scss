@@ -1,0 +1,41 @@
+.call-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.btn-circle {
+  background: #b30000;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .5);
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.2) rotateZ(45deg);
+  }
+}
+
+.my-custom-class .tooltip-inner {
+  font-size: 125%;
+  padding: 15px;
+
+}
+
+.modal-content {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+input {
+  margin: 0 0;
+}
+
+button {
+  outline: none !important;
+}
+
+.modal-title{
+  text-align: center;
+  margin-bottom: 20px;
+}

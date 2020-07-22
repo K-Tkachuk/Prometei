@@ -1,0 +1,23 @@
+.social-icon {
+  height: 42px;
+  width: 42px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.inst {
+  padding-bottom: 2px;
+  height: 48px;
+  width: 48px;
+}
+
+.phone{
+    margin-left: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(70, 70, 70);;
+    &:hover{
+        color:rgb(218, 36, 25);
+    }
+}
